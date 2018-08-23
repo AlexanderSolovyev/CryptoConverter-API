@@ -7,7 +7,7 @@ Exchange rates are taken from [CoinMarketCap](https://coinmarketcap.com) and upd
 ## Installation
 
 ```
-git clone
+git clone https://github.com/AlexanderSolovyev/CryptoConverter-API.git
 ```
 Go to the directory, and run the `bundle` command to install it.
 Run the migration:
