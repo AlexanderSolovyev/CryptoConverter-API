@@ -1,24 +1,51 @@
-# README
+# Cryptocurrency converter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This API, which implements the converter from one given currency to another.
 
-Things you may want to cover:
+Exchange rates are taken from [CoinMarketCap](https://coinmarketcap.com) and updated every 5 minutes.
 
-* Ruby version
+## Installation
 
-* System dependencies
+```
+git clone
+```
+Go to the directory, and run the `bundle` command to install it.
+Run the migration:
+```
+rake db:migrate
+```
+Converter uses gem [Crono](https://github.com/plashchynski/crono) to run the job on a schedule.
 
-* Configuration
+Run it:
+```
+bundle exec crono RAILS_ENV=development
+```
+Start the server
+```
+rails s
+```
 
-* Database creation
+## API methods:
 
-* Database initialization
+List of active currencies / crypto currency:
+```
+'/list'
+```
+For convert calculate, enter - first currency/second currency/amount.
+Example:
+```
+'/rub/btc/100/'
+```
+History of 20 last conversations:
+```
+'/history/'
+```
+You can specify the length of the history with the second parameter:
+'/history/30'
 
-* How to run the test suite
+## Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run tests:
+```
+rspec
+```

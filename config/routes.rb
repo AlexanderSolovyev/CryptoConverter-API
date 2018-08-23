@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/:currency1/:currency2/:amount1', to: 'history#converter'
+  get '/history/', to: 'history#history'
+  get '/history/:limit', to: 'history#history'
+  get '/list/', to: 'history#list'
 end
