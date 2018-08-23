@@ -36,7 +36,7 @@ Example:
 ```
 '/rub/btc/100/'
 ```
-History of 20 last conversations:
+History of 10 last conversations:
 ```
 '/history/'
 ```
